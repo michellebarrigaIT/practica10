@@ -6,6 +6,7 @@ import Step2 from "../components/Form/Step2/Step2";
 import Step3 from "../components/Form/Step3/Step3";
 import Step4 from "../components/Form/Step4/Step4";
 import Navigation from "../components/Form/Navigation/Navigation";
+import './MultiStepForm.scss'
 
 const validationSchemas = [
     Yup.object({
@@ -64,24 +65,30 @@ const validationSchemas = [
     const handleBack = () => setStep(step - 1);
 
     return (
-        <div>
-            <h2>Step {step + 1}</h2>
-            <Formik
-                initialValues={savedValues}
-                enableReinitialize
-                validationSchema={validationSchemas[step]}
-                onSubmit={handleSubmit}
-            >
-                {({ values }) => (
-                <Form>
-                    {step === 0 && <Step1 />}
-                    {step === 1 && <Step2 />}
-                    {step === 2 && <Step3 />}
-                    {step === 3 && <Step4 values={values} />}
-                    <Navigation step={step} handleBack={handleBack} />
-                </Form>
-                )}
-            </Formik>
+        <div className="container">
+            <h2 className="title">Step {step + 1}</h2>
+            <div className="welcome-message">
+                <h1>Welcome!</h1>
+                <p> Get Started in under 2 minutes.</p>
+            </div>
+            <div className="form">
+                <Formik
+                    initialValues={savedValues}
+                    enableReinitialize
+                    validationSchema={validationSchemas[step]}
+                    onSubmit={handleSubmit}
+                >
+                    {({ values }) => (
+                    <Form>
+                        {step === 0 && <Step1 />}
+                        {step === 1 && <Step2 />}
+                        {step === 2 && <Step3 />}
+                        {step === 3 && <Step4 values={values} />}
+                        <Navigation step={step} handleBack={handleBack} />
+                    </Form>
+                    )}
+                </Formik>
+            </div>
         </div>
     );
 }

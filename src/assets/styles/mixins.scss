@@ -2,7 +2,7 @@
 
 @mixin button-style() {
     background-color: variable.$btn-color;
-    color: variable.$text-color;
+    color: variable.$btn-text-color;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;

@@ -1,0 +1,33 @@
+@use "../../assets/styles/variables.scss" as variable;
+
+body{
+    background-image: url("../../assets/backgrounds/background-exercise1.jpg");
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: white;
+    width: 70vw;
+    height: 60vh;
+    border-radius: 10px;
+    justify-content: center;
+
+    .title { 
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    .welcome-message { 
+        grid-area: 2 / 1 / 6 / 3;
+        color: variable.$btn-color;
+        margin-top: 10%;
+        font-size: larger;
+    }
+    .form { 
+        grid-area: 2 / 3 / 6 / 6; 
+    }
+}

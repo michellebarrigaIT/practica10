@@ -1,11 +1,15 @@
-$bg-color: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%, rgba(83, 237, 127, 1) 100%);
+$bg-color: linear-gradient(90deg,rgba(61, 182, 225, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(113, 225, 146, 1) 100%);
 
 $text-color: rgb(35, 35, 35);
 $secondary-text-color: #585656;
+$btn-text-color: white;
 
-$btn-color: #2D6BED;
-$btn-color-hover: #112e6c;
+$input-active: #2d5ded;
+
+$btn-color: #4B3695;
+$btn-color-hover: #34296D;
 
 $border-color: #1F242F;
 
 $error-color: #FF4C4C;
+
