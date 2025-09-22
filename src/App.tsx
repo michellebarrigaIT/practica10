@@ -1,4 +1,3 @@
-import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import MultiStepForm from './Exercise1/pages/MultiStepForm'
 

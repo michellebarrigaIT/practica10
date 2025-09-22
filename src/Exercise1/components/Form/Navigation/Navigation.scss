@@ -1,0 +1,9 @@
+@use "../../../../assets/styles/mixins.scss" as mixin;
+
+.navigation{
+    padding: 1rem;
+
+    button {
+        @include mixin.button-style();
+    }
+}

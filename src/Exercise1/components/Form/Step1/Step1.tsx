@@ -1,22 +1,23 @@
 import { Field, ErrorMessage } from "formik";
+import './Step1.scss'
 
 export default function Step1() {
     return (
         <>
-        <div>
+        <div className="field">
             <label>Name:</label>
-            <Field name="name"/>
-            <ErrorMessage name="name" component="div"/>
+            <Field name="name" className="input"/>
+            <ErrorMessage name="name" component="div" className="error"/>
         </div>
-        <div>
+        <div className="field">
             <label>Age:</label>
-            <Field name="age" type="number"/>
-            <ErrorMessage name="age" component="div"/>
+            <Field name="age" type="number" className="input"/>
+            <ErrorMessage name="age" component="div" className="error"/>
         </div>
-        <div>
+        <div className="field">
             <label>Email:</label>
-            <Field name="email" type="email"/>
-            <ErrorMessage name="email" component="div"/>
+            <Field name="email" type="email" className="input"/>
+            <ErrorMessage name="email" component="div" className="error"/>
         </div>
         </>
     );
