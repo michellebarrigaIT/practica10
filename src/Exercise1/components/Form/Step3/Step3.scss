@@ -1,0 +1,25 @@
+@use "../../../../assets/styles/mixins.scss" as mixin;
+
+.step3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    padding: 1rem;
+
+    label {
+        @include mixin.label-style();
+    }
+
+    .checkbox {
+        @include mixin.checkbox-style();
+    }
+
+    .error {
+        @include mixin.error-style();
+    }
+
+    .select {
+        @include mixin.select-style();
+    }
+}

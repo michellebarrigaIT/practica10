@@ -37,3 +37,20 @@
     display: block;
     color: variable.$secondary-text-color;
 }
+
+@mixin checkbox-style(){
+    width: auto;
+    margin-right: 0.5rem;
+    color: variable.$secondary-text-color;
+    font-size: 1rem;
+}
+
+@mixin select-style(){
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid variable.$border-color;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: variable.$secondary-text-color;
+}
