@@ -9,6 +9,7 @@ src/
 ├── Exercise1
 │     └─ components
 │          └─ Form
+│          └─ Navigation
 │     └─ pages
 │          └─ MultiStepForm
 ├── Exercise2
