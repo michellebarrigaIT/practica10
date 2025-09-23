@@ -1,0 +1,19 @@
+body{
+    background-image: url("../../assets/backgrounds/bg-exercise2.webp");
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60vw;
+    height: 50vh;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
