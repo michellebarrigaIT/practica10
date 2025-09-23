@@ -14,9 +14,11 @@ src/
 │          └─ MultiStepForm
 ├── Exercise2
 │     └─ components
+│          └─ SocialLinksForm
 │     └─ pages
 ├── Exercise3
 │     └─ components
+│          └─ RatingForm
 │     └─ pages
 └── App.tsx
 └── main.tsx
