@@ -7,6 +7,7 @@ import Step3 from "../components/Form/Step3/Step3";
 import Step4 from "../components/Form/Step4/Step4";
 import Navigation from "../components/Form/Navigation/Navigation";
 import './MultiStepForm.scss'
+import StepIndicator from "../components/StepIndicator/StepIndicator";
 
 const validationSchemas = [
     Yup.object({
@@ -29,17 +30,19 @@ const validationSchemas = [
     Yup.object(),
     ];
 
-    const initialValues = {
-        name: "",
-        age: "",
-        email: "",
-        country: "",
-        city: "",
-        zip: "",
-        contactMethod: "",
-        newsletter: false,
-        category: "",
-    };
+const initialValues = {
+    name: "",
+    age: "",
+    email: "",
+    country: "",
+    city: "",
+    zip: "",
+    contactMethod: "",
+    newsletter: false,
+    category: "",
+};
+
+const stepLabels = ["Personal Info", "Address", "Preferences", "Review"];
 
 export default function MultiStepForm() {
     const [step, setStep] = useState(0);
@@ -66,7 +69,9 @@ export default function MultiStepForm() {
 
     return (
         <div className="multistep-container">
-            <h2 className="title">Step {step + 1}</h2>
+            <div className="header-bar" >
+                <StepIndicator step={step} steps={stepLabels} />
+            </div>
             <div className="welcome-message">
                 <h1>Welcome!</h1>
                 <p> Get Started in under 2 minutes.</p>

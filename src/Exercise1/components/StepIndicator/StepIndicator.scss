@@ -1,0 +1,69 @@
+@use "../../../assets/styles/variables.scss" as variables;
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            position: relative;
+
+        .circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 2px solid #ccc;
+            background: #f0f0f0;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .label {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        &.active .circle {
+            border-color: variables.$btn-color-hover;
+            background: variables.$btn-color-hover;
+            color: white;
+        }
+
+        &.completed .circle {
+            border-color: variables.$btn-color;
+            background: variables.$btn-color;
+            color: white;
+        }
+
+        &::after {
+            content: "";
+                position: absolute;
+                top: 18px;
+                right: -50%;
+                width: 100%;
+                height: 2px;
+                background: #ccc;
+                z-index: -1;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            &.completed::after {
+                background: #28a745;
+            }
+
+            &.active::after {
+                background: #007bff;
+            }
+    }
+}
