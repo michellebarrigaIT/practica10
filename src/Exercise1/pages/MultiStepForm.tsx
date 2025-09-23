@@ -30,18 +30,18 @@ const validationSchemas = [
     ];
 
     const initialValues = {
-    name: "",
-    age: "",
-    email: "",
-    country: "",
-    city: "",
-    zip: "",
-    contactMethod: "",
-    newsletter: false,
-    category: "",
+        name: "",
+        age: "",
+        email: "",
+        country: "",
+        city: "",
+        zip: "",
+        contactMethod: "",
+        newsletter: false,
+        category: "",
     };
 
-    export default function MultiStepForm() {
+export default function MultiStepForm() {
     const [step, setStep] = useState(0);
     const [savedValues, setSavedValues] = useState(initialValues);
 
@@ -65,7 +65,7 @@ const validationSchemas = [
     const handleBack = () => setStep(step - 1);
 
     return (
-        <div className="container">
+        <div className="multistep-container">
             <h2 className="title">Step {step + 1}</h2>
             <div className="welcome-message">
                 <h1>Welcome!</h1>

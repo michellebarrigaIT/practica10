@@ -6,7 +6,7 @@ export default function Step3() {
         <div className="step3">
             <div>
                 <label>Preferred Contact Method:</label>
-                <div>
+                <div className="radio-group">
                     <label><Field type="radio" name="contactMethod" value="Email" /> Email</label>
                     <label><Field type="radio" name="contactMethod" value="Phone" /> Phone</label>
                     <label><Field type="radio" name="contactMethod" value="WhatsApp" /> WhatsApp</label>

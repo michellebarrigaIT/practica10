@@ -54,3 +54,7 @@
     box-sizing: border-box;
     color: variable.$secondary-text-color;
 }
+
+@mixin option-style(){
+    color: variable.$text-color;
+}

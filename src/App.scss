@@ -6,3 +6,33 @@
   text-align: center;
   place-items: center;
 }
+
+.exercise1-bg {
+  background-image: url("../src/assets/backgrounds/background-exercise1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.exercise2-bg {
+  background-image: url("../src/assets/backgrounds/bg-exercise2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.exercise3-bg {
+  background-image: url("../src/assets/backgrounds/bg-exercise3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

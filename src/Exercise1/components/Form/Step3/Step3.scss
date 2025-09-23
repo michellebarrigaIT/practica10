@@ -11,8 +11,11 @@
         @include mixin.label-style();
     }
 
-    .checkbox {
-        @include mixin.checkbox-style();
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
     }
 
     .error {

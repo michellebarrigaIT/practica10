@@ -3,7 +3,7 @@ import "./Rating.scss";
 
 export default function Rating() {
     return (
-        <div className="container">
+        <div className="rating-container">
             <RatingForm />
         </div>
     );

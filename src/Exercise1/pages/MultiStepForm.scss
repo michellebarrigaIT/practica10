@@ -1,14 +1,6 @@
 @use "../../assets/styles/variables.scss" as variable;
 
-body{
-    background-image: url("../../assets/backgrounds/background-exercise1.jpg");
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    min-height: 100vh;
-}
-
-.container {
+.multistep-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
