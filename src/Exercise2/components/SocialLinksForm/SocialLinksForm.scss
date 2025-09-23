@@ -1,0 +1,54 @@
+@use "../../../assets/styles/mixins.scss" as mixin;
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .social-links-form{
+        display: flex;
+        align-items: flex-start;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+
+        input{
+            @include mixin.input-style();
+            margin-left: 1rem;
+        }
+
+        .select {
+            @include mixin.select-style();
+        }
+
+        .remove-button {
+            @include mixin.button-style();
+            background-color: #e74c3c;
+            margin-left: 1rem;
+
+            &:hover {
+                background-color: #c0392b;
+            }
+        }
+        
+    }
+
+    .error {
+        @include mixin.error-style();
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        button {
+            @include mixin.button-style();
+            margin: 1rem;
+        }
+    }
+}

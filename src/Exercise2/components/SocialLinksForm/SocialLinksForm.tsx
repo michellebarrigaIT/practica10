@@ -1,4 +1,5 @@
 import { useFieldArray, useForm, type SubmitHandler } from "react-hook-form";
+import "./SocialLinksForm.scss";
 
 type SocialLink = {
   platform: string;
@@ -30,59 +31,63 @@ export default function SocialLinksForm() {
             <h2>Social Media Links</h2>
 
             {fields.map((field, index) => (
-                <div key={field.id}>
-
-                <select
-                    {...register(`links.${index}.platform`, { required: "Platform required" })}
-                    className="border p-2 rounded"
-                >
-                    <option value="">Select platform</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Twitter">Twitter</option>
-                    <option value="Instagram">Instagram</option>
-                    <option value="LinkedIn">LinkedIn</option>
-                    <option value="GitHub">GitHub</option>
-                </select>
-
-                <input
-                    type="url"
-                    placeholder="https://example.com"
-                    {...register(`links.${index}.url`, {
-                    required: "URL required",
-                    pattern: {
-                        value: /^(https?:\/\/)([\w-]+(\.[\w-]+)+)(\/[\w-]*)*\/?$/,
-                        message: "Invalid URL",
-                    },
-                    })}
-                />
-
-                {fields.length > 1 && (
-                    <button
-                        type="button"
-                        onClick={() => remove(index)}
+                <div key={field.id} className="social-links-form">
+                    <select
+                        {...register(`links.${index}.platform`, { required: "Platform required" })}
+                        className="select"
                     >
-                        ✕
-                    </button>
-                )}
+                        <option value="">Select platform</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="GitHub">GitHub</option>
+                    </select>
+
+                    <input
+                        type="url"
+                        placeholder=""
+                        {...register(`links.${index}.url`, {
+                            required: "URL required",
+                            pattern: {
+                                value: /^(https?:\/\/)([\w-]+(\.[\w-]+)+)(\/[\w-]*)*\/?$/,
+                                message: "Invalid URL",
+                            },
+                        })}
+                    />
+
+                    {fields.length > 1 && (
+                        <button
+                            type="button"
+                            onClick={() => remove(index)}
+                            className="remove-button"
+                        >
+                            ✕
+                        </button>
+                    )}
                 </div>
             ))}
 
             {errors.links && (
-                <p>At least 1 valid link required</p>
+                <p className="error">At least 1 valid link required</p>
             )}
 
-            {fields.length < 5 && (
-                <button
-                    type="button"
-                    onClick={() => append({ platform: "", url: "" })}
-                >
-                    + Add Link
+            <div className="buttons">
+                {fields.length < 5 && (
+                    <button
+                        type="button"
+                        onClick={() => append({ platform: "", url: "" })}
+
+                    >
+                        + Add Link
+                    </button>
+                )}
+
+                <button type="submit">
+                    Submit
                 </button>
-            )}
-
-            <button type="submit">
-                Submit
-            </button>
+            </div>
+            
         </form>
     );
 }

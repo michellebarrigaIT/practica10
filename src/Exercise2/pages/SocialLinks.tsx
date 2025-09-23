@@ -1,4 +1,4 @@
-import SocialLinksForm from "../components/SocialLinksForm";
+import SocialLinksForm from "../components/SocialLinksForm/SocialLinksForm";
 import "./SocialLinks.scss";
 
 export default function SocialLinksPage() {
