@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import "./RatingForm.scss";
 
 type RatingValues = {
     name: string;
@@ -16,7 +17,7 @@ const validationSchema = Yup.object().shape({
         .max(5, "Max is 5"),
     feedback: Yup.string().when("rating", {
         is: (rating: number) => rating < 3,
-        then: (schema) => schema.required("Feedback is required for rating < 3"),
+        then: (schema) => schema.required("Feedback is required for rating <= 2"),
         otherwise: (schema) => schema.notRequired(),
     }),
 });
@@ -73,11 +74,7 @@ export default function RatingForm() {
                             name="feedback"
                             placeholder="Leave your comment..."
                         />
-                        <ErrorMessage
-                            component="div"
-                            className="error"
-                            name="feedback"
-                        />
+                        <ErrorMessage component="div" className="error" name="feedback"/>
                     </div>
 
                     <button type="submit">Submit</button>
@@ -96,7 +93,7 @@ export default function RatingForm() {
                     </p>
                     {submitted.feedback && (
                         <p>
-                        <strong>Feedback:</strong> {submitted.feedback}
+                            <strong>Feedback:</strong> {submitted.feedback}
                         </p>
                     )}
                 </div>
