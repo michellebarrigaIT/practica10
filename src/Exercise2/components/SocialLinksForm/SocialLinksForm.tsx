@@ -46,7 +46,7 @@ export default function SocialLinksForm() {
 
                     <input
                         type="url"
-                        placeholder=""
+                        placeholder="https://example.com"
                         {...register(`links.${index}.url`, {
                             required: "URL required",
                             pattern: {
