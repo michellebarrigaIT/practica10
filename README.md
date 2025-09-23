@@ -16,10 +16,12 @@ src/
 │     └─ components
 │          └─ SocialLinksForm
 │     └─ pages
+│          └─ SocialLinks
 ├── Exercise3
 │     └─ components
 │          └─ RatingForm
 │     └─ pages
+│          └─ Rating
 └── App.tsx
 └── main.tsx
 ```

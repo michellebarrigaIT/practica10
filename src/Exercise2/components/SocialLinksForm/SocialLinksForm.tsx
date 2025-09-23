@@ -2,18 +2,18 @@ import { useFieldArray, useForm, type SubmitHandler } from "react-hook-form";
 import "./SocialLinksForm.scss";
 
 type SocialLink = {
-  platform: string;
-  url: string;
+    platform: string;
+    url: string;
 };
 
 type FormValues = {
-  links: SocialLink[];
+    links: SocialLink[];
 };
 
 export default function SocialLinksForm() {
     const { register, control, handleSubmit, formState: { errors } } = useForm<FormValues>({
-        defaultValues: {
-        links: [{ platform: "", url: "" }],
+            defaultValues: {
+            links: [{ platform: "", url: "" }],
         },
     });
 
