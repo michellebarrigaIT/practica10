@@ -51,16 +51,15 @@ export default function MultiStepForm() {
     useEffect(() => {
         const data = localStorage.getItem("formData");
         if (data) {
-        setSavedValues(JSON.parse(data));
+            setSavedValues(JSON.parse(data));
         }
     }, []);
 
     const handleSubmit = (values: typeof initialValues) => {
         if (step === 3) {
-        alert("Form Submitted" + JSON.stringify(values, null, 2));
-        localStorage.removeItem("formData");
+            alert("Form Submitted" + JSON.stringify(values, null, 2));
         } else {
-        setStep(step + 1);
+            setStep(step + 1);
         }
         localStorage.setItem("formData", JSON.stringify(values));
     };
